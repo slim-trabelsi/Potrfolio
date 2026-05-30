@@ -39,8 +39,39 @@
 										</header>
 										<p>Mechanical Engineering Student at Enit , Passionate About Robotics, Structural Analysis , Renewable Energy Enthusiast ,Mechanical Design CAD ,FEM , Always Learning & Innovating Rigorous, curious, and motivated, I am seeking an internship to contribute to concrete and impactful projects.</p>
 										<ul class="actions">
-											<li><a href="images/CV.pdf" target="_blank" class="button big">Open CV</a></li>
+											<li><a class="button big" onclick="document.getElementById('pdfModal').style.display='flex'">Open CV</a></li>
 										</ul>
+										<!-- Modal PDF -->
+										<div id="pdfModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this)this.style.display='none'">
+											<div style="background:#fff; border-radius:12px; width:92%; max-width:500px; overflow:hidden;">
+												<!-- Header -->
+												<div style="display:flex; justify-content:space-between; align-items:center; padding:14px 18px; border-bottom:1px solid #eee;">
+													<span style="font-size:15px; font-weight:500;">Select a document</span>
+													<button onclick="document.getElementById('pdfModal').style.display='none'" style="background:none; border:none; font-size:20px; cursor:pointer; color:#666;">&#x2715;</button>
+												</div>
+												<!-- Liste des PDF -->
+												<div style="padding:12px;">
+													<a href="images/CV_English.pdf" target="_blank" style="display:flex; align-items:center; gap:14px; padding:14px 16px; border-radius:8px; border:1px solid #eee; margin-bottom:10px; text-decoration:none; color:#222;">
+														<span style="font-size:28px;">📄</span>
+														<div>
+															<div style="font-size:14px; font-weight:500;">CV — English</div>
+															<div style="font-size:12px; color:#888;">PDF • Open in new tab</div>
+														</div>
+														<span style="margin-left:auto; font-size:18px; color:#aaa;">↗</span>
+													</a>
+													<a href="images/CV.pdf" target="_blank" style="display:flex; align-items:center; gap:14px; padding:14px 16px; border-radius:8px; border:1px solid #eee; margin-bottom:10px; text-decoration:none; color:#222;">
+														<span style="font-size:28px;">📄</span>
+														<div>
+															<div style="font-size:14px; font-weight:500;">CV—Français</div>
+															<div style="font-size:12px; color:#888;">PDF • Open in new tab</div>
+														</div>
+														<span style="margin-left:auto; font-size:18px; color:#aaa;">↗</span>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										
 									</div>
 									<span class="image object">
 										<img src="images/pic10.png" alt="" />
