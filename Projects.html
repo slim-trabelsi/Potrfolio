@@ -150,7 +150,8 @@
 								</div>
 								<div class="card-actions">
 									<a class="btn-gh" onclick="document.getElementById('videoModalCPC').style.display='flex'">Video</a>
-								</div>
+									<a href="images/Rapport PFA.pdf" target="_blank" class="button big">Report</a>
+								</div>	
 							</div>
 
 							<!-- Modal Video YouTube -->
@@ -235,9 +236,61 @@
 								</div>
 								<div class="card-actions">
 									<a class="btn-gh" onclick="document.getElementById('videoModalFEM').style.display='flex'">Video</a>
+									<a class="button big" onclick="document.getElementById('pdfModal').style.display='flex'">Report</a>
 								</div>
 							</div>
+							<!-- Modal PDF -->
+							<div id="pdfModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this)this.style.display='none'">
+								<div style="background:#fff; border-radius:12px; width:92%; max-width:500px; overflow:hidden;">
 
+									<!-- Header -->
+									<div style="display:flex; justify-content:space-between; align-items:center; padding:14px 18px; border-bottom:1px solid #eee;">
+										<span style="font-size:15px; font-weight:500;">Select a document</span>
+										<button onclick="document.getElementById('pdfModal').style.display='none'" style="background:none; border:none; font-size:20px; cursor:pointer; color:#666;">&#x2715;</button>
+									</div>
+									<!-- Liste des PDF -->
+									<div style="padding:12px;">
+										<a href="images/Pliage.pdf" target="_blank" style="display:flex; align-items:center; gap:14px; padding:14px 16px; border-radius:8px; border:1px solid #eee; margin-bottom:10px; text-decoration:none; color:#222;">
+											<span style="font-size:28px;">📄</span>
+											<div>
+												<div style="font-size:14px; font-weight:500;">Pliage</div>
+												<div style="font-size:12px; color:#888;">PDF • Open in new tab</div>
+											</div>
+											<span style="margin-left:auto; font-size:18px; color:#aaa;">↗</span>
+										</a>
+									</div>
+									<div style="padding:12px;">
+										<a href="images/Traction.pdf" target="_blank" style="display:flex; align-items:center; gap:14px; padding:14px 16px; border-radius:8px; border:1px solid #eee; margin-bottom:10px; text-decoration:none; color:#222;">
+											<span style="font-size:28px;">📄</span>
+											<div>
+												<div style="font-size:14px; font-weight:500;">Traction</div>
+												<div style="font-size:12px; color:#888;">PDF • Open in new tab</div>
+											</div>
+											<span style="margin-left:auto; font-size:18px; color:#aaa;">↗</span>
+										</a>
+									</div>
+									<div style="padding:12px;">
+										<a href="images/Modélisation des comportements mécaniques.pdf" target="_blank" style="display:flex; align-items:center; gap:14px; padding:14px 16px; border-radius:8px; border:1px solid #eee; margin-bottom:10px; text-decoration:none; color:#222;">
+											<span style="font-size:28px;">📄</span>
+											<div>
+												<div style="font-size:14px; font-weight:500;">Modélisation des comportements mécaniques</div>
+												<div style="font-size:12px; color:#888;">PDF • Open in new tab</div>
+											</div>
+											<span style="margin-left:auto; font-size:18px; color:#aaa;">↗</span>
+										</a>
+									</div>
+									<div style="padding:12px;">
+										<a href="Modele de Griffith et champs asymptotiquess.pdf" target="_blank" style="display:flex; align-items:center; gap:14px; padding:14px 16px; border-radius:8px; border:1px solid #eee; margin-bottom:10px; text-decoration:none; color:#222;">
+											<span style="font-size:28px;">📄</span>
+											<div>
+												<div style="font-size:14px; font-weight:500;">Modele de Griffith et champs asymptotiquess</div>
+												<div style="font-size:12px; color:#888;">PDF • Open in new tab</div>
+											</div>
+											<span style="margin-left:auto; font-size:18px; color:#aaa;">↗</span>
+										</a>
+									</div>
+								</div>
+							</div>
 							<!-- Modal Video YouTube -->
 							<div id="videoModalFEM" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this){this.style.display='none'; document.getElementById('ytFEM').src=document.getElementById('ytFEM').src;}">
 								<div style="background:#fff; border-radius:12px; width:92%; max-width:700px; overflow:hidden;">
@@ -262,6 +315,7 @@
 							</div>
 							<div class="card-actions">
 								<a class="btn-gh" onclick="document.getElementById('videoModalSaw').style.display='flex'">Video</a>
+								<a href="images/BE.pdf" target="_blank" class="button big">Report</a>
 							</div>
 						</div>
 
