@@ -1,0 +1,437 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Projects — Slim Trabelsi</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.projects-grid {
+				display: grid !important;
+				grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)) !important;
+				gap: 22px !important;
+				margin-top: 20px !important;
+				list-style: none !important;
+				padding: 0 !important;
+			}
+			.project-card {
+				background: #ffffff !important;
+				border: 1.5px solid #e8e8e8 !important;
+				border-top: 4px solid #f56565 !important;
+				border-radius: 10px !important;
+				padding: 22px 20px !important;
+				display: flex !important;
+				flex-direction: column !important;
+				gap: 10px !important;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important;
+				transition: box-shadow 0.25s, transform 0.25s !important;
+				margin: 0 !important;
+			}
+			.project-card:hover {
+				box-shadow: 0 10px 32px rgba(0,0,0,0.12) !important;
+				transform: translateY(-5px) !important;
+			}
+			.project-card .card-title {
+				font-size: 0.97rem !important;
+				font-weight: 700 !important;
+				color: #1a1a1a !important;
+				margin: 0 0 4px 0 !important;
+				line-height: 1.4 !important;
+				border: none !important;
+				padding: 0 !important;
+			}
+			.project-card .card-desc {
+				font-size: 0.85rem !important;
+				color: #666 !important;
+				line-height: 1.7 !important;
+				margin: 0 !important;
+				flex: 1 !important;
+			}
+			.project-card .card-tags {
+				display: flex !important;
+				flex-wrap: wrap !important;
+				gap: 6px !important;
+				padding: 0 !important;
+				margin: 0 !important;
+				list-style: none !important;
+			}
+			.project-card .card-tags span {
+				background: #fff5f5 !important;
+				color: #c53030 !important;
+				font-size: 0.70rem !important;
+				font-weight: 600 !important;
+				padding: 3px 10px !important;
+				border-radius: 20px !important;
+				border: 1px solid #fed7d7 !important;
+				display: inline-block !important;
+			}
+			.project-card .card-actions {
+				display: flex !important;
+				gap: 10px !important;
+				margin-top: 6px !important;
+			}
+			.project-card .card-actions a {
+				flex: 1 !important;
+				padding: 8px 0 !important;
+				font-size: 0.83rem !important;
+				font-weight: 700 !important;
+				border-radius: 6px !important;
+				text-align: center !important;
+				text-decoration: none !important;
+				display: block !important;
+				transition: background 0.2s, color 0.2s !important;
+				cursor: pointer !important;
+			}
+			.project-card .card-actions a.btn-gh {
+				border: 2px solid #ddd !important;
+				background: transparent !important;
+				color: #333 !important;
+			}
+			.project-card .card-actions a.btn-gh:hover {
+				background: #f0f0f0 !important;
+				color: #111 !important;
+			}
+			.project-card .card-actions a.btn-demo {
+				background: #f56565 !important;
+				border: 2px solid #f56565 !important;
+				color: #fff !important;
+			}
+			.project-card .card-actions a.btn-demo:hover {
+				background: #e04444 !important;
+				border-color: #e04444 !important;
+				color: #fff !important;
+			}
+			.project-card .card-actions a.btn-report {
+				background: #2d3748 !important;
+				border: 2px solid #2d3748 !important;
+				color: #fff !important;
+			}
+			.project-card .card-actions a.btn-report:hover {
+				background: #1a202c !important;
+				color: #fff !important;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+
+					<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Slim Trabelsi</strong> &nbsp;·&nbsp; Mechanical Engineering Portfolio</a>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/slim-trabelsi7/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://www.facebook.com/salamlam.slim.5" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.instagram.com/slim_trabelsi_003/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						</ul>
+					</header>
+
+					<!-- Projects -->
+					<section>
+						<header class="major">
+							<h2>My Projects</h2>
+						</header>
+						<p style="color:#777; margin-bottom:1.5em;">A selection of engineering and technical projects — from solar energy and FEM analysis to robotics and CAD design.</p>
+
+						<div class="projects-grid">
+
+							<!-- PFA -->
+							<div class="project-card">
+								<div class="card-title">PFA — Design &amp; Improvement of a Solar Concentrator</div>
+								<div class="card-desc">Geometric optimization, optical simulation using Tonatiuh, and CAD modeling. Developed calculation codes for performance analysis and a web interface to test different design variables.</div>
+								<div class="card-tags">
+									<span>JavaScript</span>
+									<span>Python</span>
+									<span>Tonatiuh</span>
+									<span>CAD Modeling</span>
+									<span>Geometric Design</span>
+								</div>
+								<div class="card-actions">
+									<a class="btn-gh" onclick="document.getElementById('videoModalCPC').style.display='flex'">▶ Video</a>
+									<a href="images/Rapport PFA.pdf" target="_blank" class="btn-report">📄 Report</a>
+								</div>
+							</div>
+
+							<!-- Vane Pump -->
+							<div class="project-card">
+								<div class="card-title">CAD Mini-Project — Vane Pump</div>
+								<div class="card-desc">Designed and modeled a complete vane pump assembly as part of a CAD mini-project, covering all mechanical components and part relationships.</div>
+								<div class="card-tags">
+									<span>CATIA</span>
+									<span>Assembly Design</span>
+									<span>Mechanical Systems</span>
+								</div>
+								<div class="card-actions">
+									<a class="btn-gh" onclick="document.getElementById('videoModalVane').style.display='flex'">▶ Video</a>
+								</div>
+							</div>
+
+							<!-- Robot -->
+							<div class="project-card">
+								<div class="card-title">Line-Following Robot + All-Terrain Robot</div>
+								<div class="card-desc">Designed and assembled both robots as part of ENIT Robotics Club. Programmed control logic with Arduino (C++) and integrated infrared sensors for autonomous line detection.</div>
+								<div class="card-tags">
+									<span>Arduino</span>
+									<span>C++</span>
+									<span>Electronics</span>
+									<span>SolidWorks</span>
+								</div>
+								<div class="card-actions">
+									<a class="btn-demo" onclick="document.getElementById('videoModalRobot').style.display='flex'">▶ Video</a>
+								</div>
+							</div>
+
+							<!-- FEM -->
+							<div class="project-card">
+								<div class="card-title">Structural Analysis — FEM</div>
+								<div class="card-desc">Performed finite element analysis on mechanical components using Abaqus. Modeled geometry in SolidWorks and analyzed stress, strain, and deformation results.</div>
+								<div class="card-tags">
+									<span>Abaqus</span>
+									<span>FEM</span>
+									<span>SolidWorks</span>
+									<span>Structural Analysis</span>
+								</div>
+								<div class="card-actions">
+									<a class="btn-gh" onclick="document.getElementById('videoModalFEM').style.display='flex'">▶ Video</a>
+									<a class="btn-report" onclick="document.getElementById('pdfModalFEM').style.display='flex'">📄 Reports</a>
+								</div>
+							</div>
+
+							<!-- Saw -->
+							<div class="project-card">
+								<div class="card-title">Electric Wood-Cutting Saw — BE Project</div>
+								<div class="card-desc">Designed and built an electric saw for wood cutting. Used a high-torque motor with a blade setup and modeled the complete frame using SolidWorks.</div>
+								<div class="card-tags">
+									<span>Mechanical Design</span>
+									<span>SolidWorks</span>
+								</div>
+								<div class="card-actions">
+									<a class="btn-gh" onclick="document.getElementById('videoModalSaw').style.display='flex'">▶ Video</a>
+									<a href="images/BE.pdf" target="_blank" class="btn-report">📄 Report</a>
+								</div>
+							</div>
+
+							<!-- Metal Structures -->
+							<div class="project-card">
+								<div class="card-title">Metal Structure Design — Future Pub</div>
+								<div class="card-desc">Designed metal structures in 3D using SolidWorks. Manufactured parts through welding (MAG) and milling, and handled on-site installation.</div>
+								<div class="card-tags">
+									<span>SolidWorks</span>
+									<span>Welding</span>
+									<span>Fabrication</span>
+									<span>MAG</span>
+								</div>
+								<div class="card-actions">
+									<a class="btn-gh" onclick="document.getElementById('galleryModal2').style.display='flex'">📷 Photos</a>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+					<!-- Other Experiences -->
+					<section style="margin-top:3em;">
+						<header class="major">
+							<h2>Other Experiences</h2>
+						</header>
+						<div class="projects-grid">
+
+							<!-- Robotics Club -->
+							<div class="project-card">
+								<div class="card-title">Board Member — ENIT Robotics Club</div>
+								<div class="card-desc">Managed club activities, organized technical workshops, supervised members, and was responsible for organising a national robotics competition.</div>
+								<div class="card-tags">
+									<span>Leadership</span>
+									<span>Technical Assistance</span>
+									<span>Team Coordination</span>
+									<span>Project Management</span>
+									<span>Event Planning</span>
+								</div>
+								<div class="card-actions">
+									<a class="btn-gh" onclick="document.getElementById('videoModalClub').style.display='flex'">▶ More Details</a>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+					<!-- ===== ALL MODALS ===== -->
+
+					<!-- Modal: CPC Video -->
+					<div id="videoModalCPC" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this){this.style.display='none'; document.getElementById('ytCPC').src=document.getElementById('ytCPC').src;}">
+						<div style="background:#fff; border-radius:14px; width:92%; max-width:720px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+							<div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; border-bottom:1px solid #eee; background:#fafafa;">
+								<span style="font-size:14px; font-weight:700; color:#333;">PFA — Design &amp; Improvement of a Solar Concentrator</span>
+								<button onclick="document.getElementById('videoModalCPC').style.display='none'; document.getElementById('ytCPC').src=document.getElementById('ytCPC').src;" style="background:none; border:none; font-size:22px; cursor:pointer; color:#999;">&#x2715;</button>
+							</div>
+							<iframe id="ytCPC" src="https://www.youtube.com/embed/Pb8X4wO3vtU" style="width:100%; aspect-ratio:16/9; display:block; border:none;" allowfullscreen></iframe>
+						</div>
+					</div>
+
+					<!-- Modal: Vane Pump Video -->
+					<div id="videoModalVane" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this){this.style.display='none'; document.getElementById('ytVane').src=document.getElementById('ytVane').src;}">
+						<div style="background:#fff; border-radius:14px; width:92%; max-width:720px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+							<div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; border-bottom:1px solid #eee; background:#fafafa;">
+								<span style="font-size:14px; font-weight:700; color:#333;">CAD Mini-Project — Vane Pump</span>
+								<button onclick="document.getElementById('videoModalVane').style.display='none'; document.getElementById('ytVane').src=document.getElementById('ytVane').src;" style="background:none; border:none; font-size:22px; cursor:pointer; color:#999;">&#x2715;</button>
+							</div>
+							<iframe id="ytVane" src="https://www.youtube.com/embed/-p1BFSPk_hs" style="width:100%; aspect-ratio:16/9; display:block; border:none;" allowfullscreen></iframe>
+						</div>
+					</div>
+
+					<!-- Modal: Robot Video -->
+					<div id="videoModalRobot" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this){this.style.display='none'; document.getElementById('ytRobot').src=document.getElementById('ytRobot').src;}">
+						<div style="background:#fff; border-radius:14px; width:92%; max-width:720px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+							<div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; border-bottom:1px solid #eee; background:#fafafa;">
+								<span style="font-size:14px; font-weight:700; color:#333;">Line-Following Robot + All-Terrain Robot</span>
+								<button onclick="document.getElementById('videoModalRobot').style.display='none'; document.getElementById('ytRobot').src=document.getElementById('ytRobot').src;" style="background:none; border:none; font-size:22px; cursor:pointer; color:#999;">&#x2715;</button>
+							</div>
+							<iframe id="ytRobot" src="https://www.youtube.com/embed/LquuEQ2r7Ek" style="width:100%; aspect-ratio:16/9; display:block; border:none;" allowfullscreen></iframe>
+						</div>
+					</div>
+
+					<!-- Modal: FEM Video -->
+					<div id="videoModalFEM" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this){this.style.display='none'; document.getElementById('ytFEM').src=document.getElementById('ytFEM').src;}">
+						<div style="background:#fff; border-radius:14px; width:92%; max-width:720px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+							<div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; border-bottom:1px solid #eee; background:#fafafa;">
+								<span style="font-size:14px; font-weight:700; color:#333;">Structural Analysis — FEM</span>
+								<button onclick="document.getElementById('videoModalFEM').style.display='none'; document.getElementById('ytFEM').src=document.getElementById('ytFEM').src;" style="background:none; border:none; font-size:22px; cursor:pointer; color:#999;">&#x2715;</button>
+							</div>
+							<iframe id="ytFEM" src="https://www.youtube.com/embed/4XI7qkP5o80" style="width:100%; aspect-ratio:16/9; display:block; border:none;" allowfullscreen></iframe>
+						</div>
+					</div>
+
+					<!-- Modal: FEM Reports PDF -->
+					<div id="pdfModalFEM" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this)this.style.display='none'">
+						<div style="background:#fff; border-radius:14px; width:92%; max-width:480px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+							<div style="display:flex; justify-content:space-between; align-items:center; padding:16px 20px; border-bottom:1px solid #eee; background:#fafafa;">
+								<span style="font-size:15px; font-weight:700; color:#333;">📄 &nbsp;FEM Reports</span>
+								<button onclick="document.getElementById('pdfModalFEM').style.display='none'" style="background:none; border:none; font-size:22px; cursor:pointer; color:#999;">&#x2715;</button>
+							</div>
+							<div style="padding:16px; display:flex; flex-direction:column; gap:8px;">
+								<a href="images/Pliage.pdf" target="_blank" style="display:flex; align-items:center; gap:14px; padding:13px 16px; border-radius:10px; border:1.5px solid #e8e8e8; text-decoration:none; color:#222;" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='transparent'">
+									<span style="font-size:22px;">📄</span>
+									<div><div style="font-size:14px; font-weight:600;">Pliage</div><div style="font-size:12px; color:#999; margin-top:2px;">PDF · Opens in new tab</div></div>
+									<span style="margin-left:auto; color:#bbb;">↗</span>
+								</a>
+								<a href="images/Traction.pdf" target="_blank" style="display:flex; align-items:center; gap:14px; padding:13px 16px; border-radius:10px; border:1.5px solid #e8e8e8; text-decoration:none; color:#222;" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='transparent'">
+									<span style="font-size:22px;">📄</span>
+									<div><div style="font-size:14px; font-weight:600;">Traction</div><div style="font-size:12px; color:#999; margin-top:2px;">PDF · Opens in new tab</div></div>
+									<span style="margin-left:auto; color:#bbb;">↗</span>
+								</a>
+								<a href="images/Modélisation des comportements mécaniques.pdf" target="_blank" style="display:flex; align-items:center; gap:14px; padding:13px 16px; border-radius:10px; border:1.5px solid #e8e8e8; text-decoration:none; color:#222;" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='transparent'">
+									<span style="font-size:22px;">📄</span>
+									<div><div style="font-size:14px; font-weight:600;">Modélisation des comportements mécaniques</div><div style="font-size:12px; color:#999; margin-top:2px;">PDF · Opens in new tab</div></div>
+									<span style="margin-left:auto; color:#bbb;">↗</span>
+								</a>
+								<a href="Modele de Griffith et champs asymptotiquess.pdf" target="_blank" style="display:flex; align-items:center; gap:14px; padding:13px 16px; border-radius:10px; border:1.5px solid #e8e8e8; text-decoration:none; color:#222;" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='transparent'">
+									<span style="font-size:22px;">📄</span>
+									<div><div style="font-size:14px; font-weight:600;">Modèle de Griffith et champs asymptotiques</div><div style="font-size:12px; color:#999; margin-top:2px;">PDF · Opens in new tab</div></div>
+									<span style="margin-left:auto; color:#bbb;">↗</span>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Modal: Saw Video -->
+					<div id="videoModalSaw" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this){this.style.display='none'; document.getElementById('ytSaw').src=document.getElementById('ytSaw').src;}">
+						<div style="background:#fff; border-radius:14px; width:92%; max-width:720px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+							<div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; border-bottom:1px solid #eee; background:#fafafa;">
+								<span style="font-size:14px; font-weight:700; color:#333;">Electric Wood-Cutting Saw — BE Project</span>
+								<button onclick="document.getElementById('videoModalSaw').style.display='none'; document.getElementById('ytSaw').src=document.getElementById('ytSaw').src;" style="background:none; border:none; font-size:22px; cursor:pointer; color:#999;">&#x2715;</button>
+							</div>
+							<iframe id="ytSaw" src="https://www.youtube.com/embed/R7XAgUEqvYo" style="width:100%; aspect-ratio:16/9; display:block; border:none;" allowfullscreen></iframe>
+						</div>
+					</div>
+
+					<!-- Modal: Gallery Metal Structures -->
+					<div id="galleryModal2" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this)this.style.display='none'">
+						<div style="background:#fff; border-radius:14px; width:92%; max-width:720px; max-height:85vh; overflow-y:auto; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+							<div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; border-bottom:1px solid #eee; position:sticky; top:0; background:#fff; z-index:1;">
+								<span style="font-size:14px; font-weight:700; color:#333;">📷 &nbsp;Metal Structure Design — Future Pub</span>
+								<button onclick="document.getElementById('galleryModal2').style.display='none'" style="background:none; border:none; font-size:22px; cursor:pointer; color:#999;">&#x2715;</button>
+							</div>
+							<div style="display:grid; grid-template-columns:repeat(3,1fr); gap:4px; padding:4px;">
+								<img src="images/1.jpg"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/2.jpg"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/3.jpg"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/4.jpg"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/5.jpg"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/6.jpg"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/7.jpg"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/8.jpg"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/9.jpg"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/10.jpg" onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/11.jpg" onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/12.jpg" onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/13.jpg" onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/14.jpg" onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/15.jpg" onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+							</div>
+						</div>
+					</div>
+
+					<!-- Modal: Club Video -->
+					<div id="videoModalClub" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this){this.style.display='none'; document.getElementById('ytClub').src=document.getElementById('ytClub').src;}">
+						<div style="background:#fff; border-radius:14px; width:92%; max-width:720px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+							<div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; border-bottom:1px solid #eee; background:#fafafa;">
+								<span style="font-size:14px; font-weight:700; color:#333;">Board Member — ENIT Robotics Club</span>
+								<button onclick="document.getElementById('videoModalClub').style.display='none'; document.getElementById('ytClub').src=document.getElementById('ytClub').src;" style="background:none; border:none; font-size:22px; cursor:pointer; color:#999;">&#x2715;</button>
+							</div>
+							<iframe id="ytClub" src="https://www.youtube.com/embed/9x6mO9p24k0" style="width:100%; aspect-ratio:16/9; display:block; border:none;" allowfullscreen></iframe>
+						</div>
+					</div>
+
+					<!-- Lightbox -->
+					<div id="lb" onclick="this.style.display='none'" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.93); z-index:2000; align-items:center; justify-content:center; cursor:zoom-out;">
+						<img id="lb-img" src="" style="max-width:90%; max-height:90vh; border-radius:10px; object-fit:contain;">
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Sidebar -->
+			<div id="sidebar">
+				<div class="inner">
+					<section id="search" class="alt">
+						<form method="post" action="#">
+							<input type="text" name="query" id="query" placeholder="Search" />
+						</form>
+					</section>
+					<nav id="menu">
+						<header class="major"><h2>Menu</h2></header>
+						<ul>
+							<li><a href="index.html">🏠 &nbsp;Homepage</a></li>
+							<li><a href="Education.html">🎓 &nbsp;Education</a></li>
+							<li><a href="Experience.html">💼 &nbsp;Experience</a></li>
+							<li><a href="Projects.html">⚙️ &nbsp;Projects</a></li>
+							<li><a href="Skills.html">🛠️ &nbsp;Skills</a></li>
+						</ul>
+					</nav>
+					<section>
+						<header class="major"><h2>Get in touch</h2></header>
+						<p>I am currently looking for an engineering internship. Feel free to contact me to discuss opportunities.</p>
+						<ul class="contact">
+							<li class="icon solid fa-envelope"><a href="mailto:slim.trabelsi@etudiant-enit.utm.tn">slim.trabelsi@etudiant-enit.utm.tn</a></li>
+							<li class="icon solid fa-phone">+216 55 902 236</li>
+							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/slim-trabelsi7/" target="_blank">linkedin.com/in/slim-trabelsi7</a></li>
+						</ul>
+					</section>
+					<footer id="footer">
+						<p class="copyright">&copy; 2026. All rights reserved. Made by Slim Trabelsi.</p>
+					</footer>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
