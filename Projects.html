@@ -156,6 +156,25 @@
 								</div>
 							</div>
 
+							
+							<div class="project-card">
+								<div class="card-title">Turbojet Engine Design and 3D Modeling</div>
+								<div class="card-desc">Developed a detailed 3D CAD model of a turbojet engine using SolidWorks. Designed and assembled key engine components, including the compressor, combustion chamber, turbine, shaft, and nozzle.</div>
+								<div class="card-tags">
+									<span>SolidWorks</span>
+									<span>Mechanical Design</span>
+									<span>Aerospace Systems</span>
+									<span>3D CAD</span>
+									<span>Engineering Analysis</span>
+								</div>
+								<div class="card-actions">
+									<a class="btn-gh" onclick="document.getElementById('videoModalJet').style.display='flex'">▶ Video</a>
+									<a class="btn-gh" onclick="document.getElementById('galleryModaJet').style.display='flex'">📷 Photos</a>
+									<a href="https://app.mediafire.com/folder/myfiles" target="_blank" class="btn-report">⚙️ Components</a>
+								</div>
+							</div>
+
+							
 							<!-- Vane Pump -->
 							<div class="project-card">
 								<div class="card-title">CAD Mini-Project — Vane Pump</div>
@@ -272,6 +291,18 @@
 						</div>
 					</div>
 
+					
+					<div id="videoModalJet" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this){this.style.display='none'; document.getElementById('ytCPC').src=document.getElementById('ytCPC').src;}">
+						<div style="background:#fff; border-radius:14px; width:92%; max-width:720px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+							<div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; border-bottom:1px solid #eee; background:#fafafa;">
+								<span style="font-size:14px; font-weight:700; color:#333;">Turbojet Engine Design and 3D Modeling</span>
+								<button onclick="document.getElementById('videoModalJet').style.display='none'; document.getElementById('ytCPC').src=document.getElementById('ytCPC').src;" style="background:none; border:none; font-size:22px; cursor:pointer; color:#999;">&#x2715;</button>
+							</div>
+							<iframe id="ytCPC" src="https://youtu.be/mQKrZBL-qPE" style="width:100%; aspect-ratio:16/9; display:block; border:none;" allowfullscreen></iframe>
+						</div>
+					</div>
+					
+
 					<!-- Modal: Vane Pump Video -->
 					<div id="videoModalVane" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this){this.style.display='none'; document.getElementById('ytVane').src=document.getElementById('ytVane').src;}">
 						<div style="background:#fff; border-radius:14px; width:92%; max-width:720px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
@@ -371,6 +402,31 @@
 								<img src="images/13.jpg" onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
 								<img src="images/14.jpg" onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
 								<img src="images/15.jpg" onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+							</div>
+						</div>
+					</div>
+
+					<div id="galleryModaJet" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this)this.style.display='none'">
+						<div style="background:#fff; border-radius:14px; width:92%; max-width:720px; max-height:85vh; overflow-y:auto; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+							<div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; border-bottom:1px solid #eee; position:sticky; top:0; background:#fff; z-index:1;">
+								<span style="font-size:14px; font-weight:700; color:#333;">📷 &nbsp;Turbojet Engine Design and 3D Modeling</span>
+								<button onclick="document.getElementById('galleryModaJet').style.display='none'" style="background:none; border:none; font-size:22px; cursor:pointer; color:#999;">&#x2715;</button>
+							</div>
+							<div style="display:grid; grid-template-columns:repeat(3,1fr); gap:4px; padding:4px;">
+								<img src="images/X1.png"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/X2.png"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/X3.png"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/X4.png"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/X5.jpeg"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/X6.png"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/X7.png"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/X8.webp"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/X9.webp"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/X10.jpeg" onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/X11.png" onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/X12.png" onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/X13.png" onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/X14.png" onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
 							</div>
 						</div>
 					</div>
