@@ -110,6 +110,48 @@
 				background: #1a202c !important;
 				color: #fff !important;
 			}
+
+			/* ── ANSYS Video Choice Modal ── */
+			.video-choice-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 14px;
+				padding: 20px;
+			}
+			.video-choice-btn {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+				padding: 22px 14px;
+				border-radius: 10px;
+				border: 2px solid #e8e8e8;
+				background: #fafafa;
+				cursor: pointer;
+				transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+				text-align: center;
+				text-decoration: none;
+			}
+			.video-choice-btn:hover {
+				border-color: #f56565;
+				box-shadow: 0 4px 16px rgba(245,101,101,0.15);
+				transform: translateY(-3px);
+				background: #fff5f5;
+			}
+			.video-choice-btn .vc-icon {
+				font-size: 2rem;
+			}
+			.video-choice-btn .vc-title {
+				font-size: 0.88rem;
+				font-weight: 700;
+				color: #1a1a1a;
+				line-height: 1.4;
+			}
+			.video-choice-btn .vc-sub {
+				font-size: 0.75rem;
+				color: #888;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -203,15 +245,31 @@
 								</div>
 							</div>
 
+							<!-- ANSYS — UPDATED CARD -->
+							<div class="project-card">
+								<div class="card-title">ANSYS Structural Simulation and Analysis</div>
+								<div class="card-desc">Conducted a comprehensive finite element analysis (FEA) using ANSYS to evaluate the structural performance of an engineering component under operational loading conditions. Performed geometry preparation, meshing, boundary condition definition, and result interpretation to assess stress distribution, deformation, and safety factors.</div>
+								<div class="card-tags">
+									<span>ANSYS</span>
+									<span>FEM</span>
+									<span>Structural Simulation</span>
+									<span>Engineering Analysis</span>
+								</div>
+								<div class="card-actions">
+									<a class="btn-demo" onclick="document.getElementById('videoChoiceModalAnsys').style.display='flex'">▶ Video</a>
+									<a class="btn-gh" onclick="document.getElementById('galleryModalAnsys').style.display='flex'">📷 Photos</a>
+								</div>
+							</div>
+
 							<!-- FEM -->
 							<div class="project-card">
-								<div class="card-title">Structural Analysis — FEM</div>
+								<div class="card-title">Abaqus Structural Analysis — FEM</div>
 								<div class="card-desc">Performed finite element analysis on mechanical components using Abaqus. Modeled geometry in SolidWorks and analyzed stress, strain, and deformation results.</div>
 								<div class="card-tags">
 									<span>Abaqus</span>
 									<span>FEM</span>
-									<span>SolidWorks</span>
-									<span>Structural Analysis</span>
+									<span>Structural Simulation</span>
+									<span>Engineering Analysis</span>
 								</div>
 								<div class="card-actions">
 									<a class="btn-gh" onclick="document.getElementById('videoModalFEM').style.display='flex'">▶ Video</a>
@@ -290,7 +348,7 @@
 						</div>
 					</div>
 
-					<!-- Modal: Turbojet Video — FIXED (unique id ytJet, correct embed URL) -->
+					<!-- Modal: Turbojet Video -->
 					<div id="videoModalJet" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this){this.style.display='none'; document.getElementById('ytJet').src=document.getElementById('ytJet').src;}">
 						<div style="background:#fff; border-radius:14px; width:92%; max-width:720px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
 							<div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; border-bottom:1px solid #eee; background:#fafafa;">
@@ -331,7 +389,7 @@
 								<button onclick="document.getElementById('videoModalFEM').style.display='none'; document.getElementById('ytFEM').src=document.getElementById('ytFEM').src;" style="background:none; border:none; font-size:22px; cursor:pointer; color:#999;">&#x2715;</button>
 							</div>
 							<iframe id="ytFEM" src="https://www.youtube.com/embed/4XI7qkP5o80" style="width:100%; aspect-ratio:16/9; display:block; border:none;" allowfullscreen></iframe>
-						</div>
+						</div>                     
 					</div>
 
 					<!-- Modal: FEM Reports PDF -->
@@ -404,7 +462,7 @@
 						</div>
 					</div>
 
-					<!-- Modal: Gallery Turbojet — FIXED (id galleryModalJet, was galleryModaJet typo) -->
+					<!-- Modal: Gallery Turbojet -->
 					<div id="galleryModalJet" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this)this.style.display='none'">
 						<div style="background:#fff; border-radius:14px; width:92%; max-width:720px; max-height:85vh; overflow-y:auto; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
 							<div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; border-bottom:1px solid #eee; position:sticky; top:0; background:#fff; z-index:1;">
@@ -441,7 +499,92 @@
 						</div>
 					</div>
 
-					<!-- Lightbox -->
+					<!-- ═══════════════════════════════════════════════════
+					     NEW MODALS FOR ANSYS CARD
+					     ═══════════════════════════════════════════════════ -->
+
+					<!-- Modal: ANSYS Video Choice (step 1 — pick a video) -->
+					<div id="videoChoiceModalAnsys" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this)this.style.display='none'">
+						<div style="background:#fff; border-radius:14px; width:92%; max-width:500px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+							<div style="display:flex; justify-content:space-between; align-items:center; padding:16px 20px; border-bottom:1px solid #eee; background:#fafafa;">
+								<span style="font-size:15px; font-weight:700; color:#333;">▶ &nbsp;ANSYS — Choose a Video</span>
+								<button onclick="document.getElementById('videoChoiceModalAnsys').style.display='none'" style="background:none; border:none; font-size:22px; cursor:pointer; color:#999;">&#x2715;</button>
+							</div>
+							<div class="video-choice-grid">
+								<!-- Choice 1 — replace ANSYS_VIDEO_1_ID with your YouTube video ID -->
+								<a class="video-choice-btn" onclick="
+									document.getElementById('videoChoiceModalAnsys').style.display='none';
+									document.getElementById('ytAnsys1').src='https://www.youtube.com/embed/PvMEBXh5jPg';
+									document.getElementById('videoModalAnsys1').style.display='flex';">
+									<span class="vc-icon">🎬</span>
+									<span class="vc-title">Video 1<br>Gear</span>
+								</a>
+								<!-- Choice 2 — replace ANSYS_VIDEO_2_ID with your YouTube video ID -->
+								<a class="video-choice-btn" onclick="
+									document.getElementById('videoChoiceModalAnsys').style.display='none';
+									document.getElementById('ytAnsys2').src='https://www.youtube.com/embed/bibrKYS4jJ0';
+									document.getElementById('videoModalAnsys2').style.display='flex';">
+									<span class="vc-icon">🎬</span>
+									<span class="vc-title">Video 2<br>Spring</span>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Modal: ANSYS Video 1 player -->
+					<div id="videoModalAnsys1" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this){this.style.display='none'; document.getElementById('ytAnsys1').src='';}">
+						<div style="background:#fff; border-radius:14px; width:92%; max-width:720px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+							<div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; border-bottom:1px solid #eee; background:#fafafa;">
+								<div style="display:flex; align-items:center; gap:10px;">
+									<button onclick="document.getElementById('videoModalAnsys1').style.display='none'; document.getElementById('ytAnsys1').src=''; document.getElementById('videoChoiceModalAnsys').style.display='flex';" style="background:#f0f0f0; border:none; border-radius:6px; padding:5px 10px; font-size:13px; cursor:pointer; color:#555;">← Back</button>
+									<span style="font-size:14px; font-weight:700; color:#333;">ANSYS — Video 1 · Gear</span>
+								</div>
+								<button onclick="document.getElementById('videoModalAnsys1').style.display='none'; document.getElementById('ytAnsys1').src='';" style="background:none; border:none; font-size:22px; cursor:pointer; color:#999;">&#x2715;</button>
+							</div>
+							<iframe id="ytAnsys1" src="" style="width:100%; aspect-ratio:16/9; display:block; border:none;" allowfullscreen></iframe>
+						</div>
+					</div>
+
+					<!-- Modal: ANSYS Video 2 player -->
+					<div id="videoModalAnsys2" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this){this.style.display='none'; document.getElementById('ytAnsys2').src='';}">
+						<div style="background:#fff; border-radius:14px; width:92%; max-width:720px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+							<div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; border-bottom:1px solid #eee; background:#fafafa;">
+								<div style="display:flex; align-items:center; gap:10px;">
+									<button onclick="document.getElementById('videoModalAnsys2').style.display='none'; document.getElementById('ytAnsys2').src=''; document.getElementById('videoChoiceModalAnsys').style.display='flex';" style="background:#f0f0f0; border:none; border-radius:6px; padding:5px 10px; font-size:13px; cursor:pointer; color:#555;">← Back</button>
+									<span style="font-size:14px; font-weight:700; color:#333;">ANSYS — Video 2 · Spring</span>
+								</div>
+								<button onclick="document.getElementById('videoModalAnsys2').style.display='none'; document.getElementById('ytAnsys2').src='';" style="background:none; border:none; font-size:22px; cursor:pointer; color:#999;">&#x2715;</button>
+							</div>
+							<iframe id="ytAnsys2" src="" style="width:100%; aspect-ratio:16/9; display:block; border:none;" allowfullscreen></iframe>
+						</div>
+					</div>
+
+					<!-- Modal: ANSYS Photo Gallery -->
+					<!-- Add your ANSYS photo filenames in images/ below (e.g. images/A1.png, A2.png …) -->
+					<div id="galleryModalAnsys" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1000; align-items:center; justify-content:center;" onclick="if(event.target===this)this.style.display='none'">
+						<div style="background:#fff; border-radius:14px; width:92%; max-width:720px; max-height:85vh; overflow-y:auto; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+							<div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; border-bottom:1px solid #eee; position:sticky; top:0; background:#fff; z-index:1;">
+								<span style="font-size:14px; font-weight:700; color:#333;">📷 &nbsp;ANSYS Structural Simulation — Photos</span>
+								<button onclick="document.getElementById('galleryModalAnsys').style.display='none'" style="background:none; border:none; font-size:22px; cursor:pointer; color:#999;">&#x2715;</button>
+							</div>
+							<div style="display:grid; grid-template-columns:repeat(3,1fr); gap:4px; padding:4px;">
+								<!-- Replace A1.png … A9.png with your actual ANSYS image filenames -->
+								<img src="images/A1.png"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/A2.png"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/A3.png"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/A4.png"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/A5.png"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/A6.png"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+								<img src="images/A7.png"  onclick="document.getElementById('lb').style.display='flex'; document.getElementById('lb-img').src=this.src;" style="width:100%; aspect-ratio:4/3; object-fit:cover; cursor:pointer;">
+							</div>
+						</div>
+					</div>
+
+					<!-- ═══════════════════════════════════════════════════
+					     END OF NEW ANSYS MODALS
+					     ═══════════════════════════════════════════════════ -->
+
+					<!-- Lightbox (shared) -->
 					<div id="lb" onclick="this.style.display='none'" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.93); z-index:2000; align-items:center; justify-content:center; cursor:zoom-out;">
 						<img id="lb-img" src="" style="max-width:90%; max-height:90vh; border-radius:10px; object-fit:contain;">
 					</div>
